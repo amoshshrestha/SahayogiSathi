@@ -1,8 +1,10 @@
 import React from "react";
 import CTASection from "../components/CTASection";
 import EventSection from "../components/EventSection";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="relative w-full h-[500px] bg-cover bg-center flex items-center bg-white">
@@ -34,7 +36,7 @@ const Index = () => {
             child should be deprived of schooling due to financial constraints,
             and this vision drives our work.
           </p>
-          <button className="mt-6 bg-yellow-500 text-black px-6 py-3 rounded-md font-medium hover:bg-yellow-600">
+          <button onClick={() => navigate("/about")} className="mt-6 bg-yellow-500 text-black px-6 py-3 rounded-md font-medium hover:bg-yellow-600" >
             Learn More
           </button>
         </div>

@@ -70,14 +70,14 @@ const Navbar = () => {
                 About us
               </Link>
             </li>
-            <li className="relative">
-              <Link to={"#"} className="block w-full text-left font-bold">
+            <li>
+              <Link to={"#"} className="block">
                 Mission
               </Link>
             </li>
             <li>
               <Link to={"#"} className="block">
-                Camera Roll
+                Gallery
               </Link>
             </li>
             <li>
@@ -87,12 +87,12 @@ const Navbar = () => {
             </li>
             <li>
               <Link to={"#"} className="block">
-                Impact Statements
+                Projects
               </Link>
             </li>
             <li>
               <Link to={"#"} className="block">
-                Connect
+                Contact us
               </Link>
             </li>
           </ul>
