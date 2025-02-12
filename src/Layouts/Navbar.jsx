@@ -24,7 +24,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="relative">
-            <Link to={"#"} className="items-center hover:text-gray-500">
+            <Link to={"/mission"} className="items-center hover:text-gray-500">
               Mission
             </Link>
           </li>
@@ -71,7 +71,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to={"#"} className="block">
+              <Link to={"/mission"} className="block">
                 Mission
               </Link>
             </li>

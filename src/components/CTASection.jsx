@@ -3,13 +3,11 @@ import React from "react";
 const CTASection = () => {
   return (
     <div className="relative w-full mx-auto my-10 bg-black rounded-2xl overflow-hidden flex justify-center items-center px-4 md:px-8 lg:px-12 py-16 md:py-24">
-      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
         style={{ backgroundImage: "url('/images/group.jpg')" }}
       ></div>
 
-      {/* Content */}
       <div className="relative flex flex-col items-center text-center max-w-4xl">
         <h2 className="text-white font-bold text-3xl md:text-5xl leading-tight">
         Invest in Nepal's future - empower children with education.

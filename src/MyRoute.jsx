@@ -4,6 +4,7 @@ import Layout from "./Layouts/Layout";
 import About from "./Pages/About";
 import Index from "./Pages/Index";
 import ContactPage from "./Pages/Contact";
+import Mission from "./Pages/Mission";
 
 const MyRoute = () => {
   return (
@@ -14,6 +15,7 @@ const MyRoute = () => {
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/mission" element={<Mission />} />
           </Route>
         </Routes>
       </BrowserRouter>
