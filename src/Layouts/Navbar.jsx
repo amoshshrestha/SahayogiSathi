@@ -61,12 +61,12 @@ const Navbar = () => {
         <div className="md:hidden bg-[#FAF7ED] p-4 mt-2 shadow-md">
           <ul className="space-y-4 text-gray-800 text-center font-medium">
             <li>
-              <Link to={"#"} className="block">
+              <Link to={"/"} className="block">
                 Home
               </Link>
             </li>
             <li>
-              <Link to={"#"} className="block">
+              <Link to={"/about"} className="block">
                 About us
               </Link>
             </li>
@@ -91,7 +91,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to={"#"} className="block">
+              <Link to={"/contact"} className="block">
                 Contact us
               </Link>
             </li>
