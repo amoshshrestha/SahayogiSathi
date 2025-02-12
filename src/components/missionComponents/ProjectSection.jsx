@@ -48,7 +48,7 @@ const ProjectsSection = () => {
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: "url('/images/ChildrenImage.svg')",
+                backgroundImage: "url('/images/feedthehomeless.jpeg')",
                 opacity: 0.8,
                 filter: "brightness(50%)",
               }}

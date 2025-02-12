@@ -2,6 +2,7 @@ import React from "react";
 import CTASection from "../components/CTASection";
 import EventSection from "../components/EventSection";
 import { useNavigate } from "react-router-dom";
+import ProjectsSection from "../components/missionComponents/ProjectSection";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -48,6 +49,7 @@ const Index = () => {
           />
         </div>
       </div>
+      <ProjectsSection/>
       <CTASection />
       <EventSection />
     </>

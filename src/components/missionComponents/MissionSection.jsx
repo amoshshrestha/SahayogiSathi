@@ -10,34 +10,24 @@ import {
 const missions = [
   {
     icon: <ShieldCheck size={28} />,
-    title: "Tackle Discrimination",
-    description:
-      "Actively combat discrimination against girls and children from marginalized communities to create a more equitable society.",
+    title: "Tackle Discrimination"
   },
   {
     icon: <HeartHandshake size={28} />,
     title: "Disaster Response and Relief",
-    description:
-      "Respond swiftly to natural disasters and public health crises, offering immediate relief and sustainable, long-term recovery support.",
-  },
+    },
   {
     icon: <BookOpen size={28} />,
     title: "Universal Education Access",
-    description:
-      "Ensure every child, irrespective of financial hardships, gender, or caste, has access to quality education and opportunities to succeed.",
-  },
+    },
   {
     icon: <Home size={28} />,
     title: "Community Rebuilding and Resilience",
-    description:
-      "Assist families and communities in rebuilding and fostering resilience after emergencies, ensuring a path to recovery and stability.",
-  },
+     },
   {
     icon: <Users size={28} />,
     title: "Empowering Marginalized Communities",
-    description:
-      "Promote inclusion and provide resources to empower children and families from underserved and disadvantaged backgrounds.",
-  },
+    },
 ];
 
 const MissionSection = () => {
