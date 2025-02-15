@@ -30,12 +30,16 @@ const EventSection = () => {
                 {event.title}
               </h3>
               <div className="flex justify-center gap-3 md:gap-4">
-                <button className="bg-[#16404D] text-white py-2 px-4 md:px-6 rounded text-sm md:text-base lg:text-lg">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScGv3xmbebauL3buWnYOwvmM_4mWHDEQQJ7abD8fI-qGbO37w/viewform">
+                <button className="bg-[#16404D] text-white py-2 px-4 md:px-6 rounded text-sm md:text-base lg:text-lg hover:bg-[#6e8a84]">
                   Volunteer
                 </button>
-                <button className="bg-[#16404D] text-white py-2 px-4 md:px-6 rounded text-sm md:text-base lg:text-lg">
+                </a>
+                <a href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o" className="hover:text-gray-500">
+                <button className="bg-[#16404D] text-white py-2 px-4 md:px-6 rounded text-sm md:text-base lg:text-lg hover:bg-[#6e8a84]">
                   Donate
                 </button>
+                </a>
               </div>
             </div>
           ))}
