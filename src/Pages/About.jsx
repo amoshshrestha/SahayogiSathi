@@ -1,6 +1,7 @@
 import React from "react";
 import EventSection from "../components/EventSection";
 import CTASection from "../components/CTASection";
+import callbackify from "./../../node_modules/axios/lib/helpers/callbackify";
 
 const About = () => {
   return (
@@ -18,7 +19,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
             <div className="space-y-6 md:space-y-10">
               <div className="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
-                <p>
+                <p className="text-justify">
                   Established in January 2021 to address the economic hardships
                   faced by families during the post-COVID era. Many parents lost
                   their jobs, leaving them unable to afford their children's
@@ -27,7 +28,7 @@ const About = () => {
                   our work.
                 </p>
 
-                <p>
+                <p className="text-justify">
                   While based in Kathmandu, our efforts began in
                   Sindhupalchowk—a region deeply impacted by the 2016 earthquake
                   and recurrent natural disasters like landslides and floods.
@@ -53,7 +54,7 @@ const About = () => {
           </div>
 
           <div className="mt-4 lg:mt-6">
-            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+            <p className="text-gray-700 leading-relaxed text-base md:text-lg text-justify">
               Our work is centered on empowering children by addressing their
               educational, health, and developmental needs. This includes
               covering school tuition, providing essential resources like books
@@ -78,7 +79,7 @@ const About = () => {
 
             <div className="space-y-6 md:space-y-10">
               <div className="space-y-6 text-base md:text-xl text-gray-700 leading-relaxed">
-                <p>
+                <p className="text-justify">
                   While education is at the heart of our mission, we also
                   respond to national emergencies such as natural disasters and
                   public health crises. From disaster relief to addressing

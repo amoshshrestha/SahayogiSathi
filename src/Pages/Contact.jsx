@@ -15,10 +15,10 @@ export default function ContactPage() {
           {/* Main Heading and Description */}
           <div className="flex flex-col lg:flex-row justify-between items-start">
             <div className="max-w-lg">
-              <h1 className="text-3xl md:text-5xl font-bold text-[#1D2130] leading-[120%]">
+              <h1 className="text-3xl md:text-5xl font-bold text-[#1D2130] leading-[120%] ">
                 We&apos;d love to hear from you
               </h1>
-              <p className="mt-4 text-lg text-[#1D2130] opacity-70 leading-[160%]">
+              <p className="mt-4 text-lg text-[#1D2130] opacity-70 leading-[160%] text-justify">
                 Have any question in mind or want to enquire? Please feel free
                 to contact us through the form or the following details.
               </p>

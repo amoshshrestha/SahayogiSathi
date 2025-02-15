@@ -8,14 +8,14 @@ const FirstSection = () => {
             <h3 className=" uppercase tracking-widest text-black font-bold mb-2">
               WHAT OUR MISSION IS
             </h3>
-            <p className="text-gray-800 text-lg leading-relaxed">
+            <p className="text-gray-800 text-lg leading-relaxed text-justify">
               Our mission is to ensure every child, regardless of financial
               hardships, gender, or caste, has access to education and
               opportunities to thrive. We work to address systemic inequalities
               by tackling discrimination against girls and children from
               marginalized communities.
             </p>
-            <p className="text-gray-800 text-lg leading-relaxed mt-4">
+            <p className="text-gray-800 text-lg leading-relaxed mt-4 text-justify">
               In addition to our educational initiatives, we are committed to
               responding to emergencies, including natural disasters and public
               health crises, by providing immediate relief and long-term support

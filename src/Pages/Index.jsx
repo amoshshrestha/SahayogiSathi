@@ -14,10 +14,13 @@ const Index = () => {
           <h1 className="text-white text-5xl font-bold mb-6">
             Donate For a Cause
           </h1>
-          <a href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o" className="hover:text-gray-500">
-          <button className="bg-[#A6CDC6] text-[#16404D] text-lg font-medium px-6 py-3 rounded-md hover:bg-[#8fb6af]">
-            Donate Now
-          </button>
+          <a
+            href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o"
+            className="hover:text-gray-500"
+          >
+            <button className="bg-[#A6CDC6] text-[#16404D] text-lg font-medium px-6 py-3 rounded-md hover:bg-[#8fb6af]">
+              Donate Now
+            </button>
           </a>
         </div>
         <div
@@ -31,7 +34,7 @@ const Index = () => {
           <h2 className="text-2xl lg:text-3xl font-bold uppercase tracking-wider border-l-4 border-yellow-500 pl-4 mb-6">
             Know About Us
           </h2>
-          <p className="text-lg leading-relaxed text-gray-700">
+          <p className="text-lg leading-relaxed text-gray-700 text-justify">
             Sahayogi Saathi is a youth-led and women-led foundation established
             in January 2021 to address the economic hardships faced by families
             during the post-COVID era. Many parents lost their jobs, leaving
@@ -39,7 +42,10 @@ const Index = () => {
             child should be deprived of schooling due to financial constraints,
             and this vision drives our work.
           </p>
-          <button onClick={() => navigate("/about")} className="mt-6 bg-yellow-500 text-black px-6 py-3 rounded-md font-medium hover:bg-yellow-600" >
+          <button
+            onClick={() => navigate("/about")}
+            className="mt-6 bg-yellow-500 text-black px-6 py-3 rounded-md font-medium hover:bg-yellow-600"
+          >
             Learn More
           </button>
         </div>
@@ -51,7 +57,7 @@ const Index = () => {
           />
         </div>
       </div>
-      <ProjectsSection/>
+      <ProjectsSection />
       <CTASection />
       <EventSection />
     </>

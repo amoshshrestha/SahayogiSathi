@@ -20,7 +20,7 @@ const ProjectsSection = () => {
             <div className="absolute inset-0 bg-black/30"></div>
             <div className="relative z-10 text-white p-4 rounded-lg">
               <h3 className="text-xl font-bold">Cloth Drive</h3>
-              <p className="text-sm mt-2">
+              <p className="text-sm mt-2 text-justify">
                 13 Gallon bags of Clothes and 13 Gallon bags of Toys collected
                 for children and their Families of 3 Schools in Sindupalchowk.
               </p>
@@ -38,7 +38,7 @@ const ProjectsSection = () => {
             <div className="absolute inset-0 bg-black/30"></div>
             <div className="relative z-10 text-white p-4 rounded-lg">
               <h3 className="text-xl font-bold">Books for a Cause</h3>
-              <p className="text-sm mt-2">
+              <p className="text-sm mt-2 text-justify">
                 1500+ books collected, partnered with 2 Schools and individual
                 Donors.
               </p>
@@ -56,7 +56,7 @@ const ProjectsSection = () => {
             <div className="absolute inset-0 bg-black/30"></div>
             <div className="relative z-10 text-white p-4 rounded-lg">
               <h3 className="text-xl font-bold">Feed the Homeless</h3>
-              <p className="text-sm mt-2">
+              <p className="text-sm mt-2 text-justify">
                 Collected leftover dining dollars and remaining food items
                 before students moved out of their dorms and went for summer
                 break and donated it to 50+ homeless people in the Washington sq
