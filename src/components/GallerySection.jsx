@@ -1,0 +1,101 @@
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight, Camera } from "lucide-react";
+
+const images = [
+  "/images/cameraroll/2.jpg",
+  "/images/cameraroll/1.jpg",
+  "/images/cameraroll/3.jpg",
+  "/images/cameraroll/4.jpg",
+  "/images/cameraroll/5.jpg",
+  "/images/cameraroll/6.jpg",
+  "/images/cameraroll/7.jpg",
+  "/images/cameraroll/8.jpg",
+  "/images/cameraroll/9.jpg",
+  "/images/cameraroll/10.jpg",
+  "/images/cameraroll/11.jpg",
+  "/images/cameraroll/11.jpg",
+  "/images/cameraroll/11.jpg",
+  "/images/cameraroll/11.jpg",
+  "/images/cameraroll/11.jpg",
+];
+
+const GallerySection = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const imagesPerPage = 12;
+  const totalPages = Math.ceil(images.length / imagesPerPage);
+
+  const indexOfLastImage = currentPage * imagesPerPage;
+  const indexOfFirstImage = indexOfLastImage - imagesPerPage;
+  const currentImages = images.slice(indexOfFirstImage, indexOfLastImage);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  return (
+    <div className="bg-gradient-to-br from-teal-50 to-amber-50">
+      <div className="container mx-auto px-6 md:px-12 py-8 max-w-7xl">
+        {/* Header */}
+        <div className="flex items-center justify-start px-12 mb-8">
+          <Camera className="w-8 h-8 text-teal-600 mr-2" />
+          <h1 className="text-3xl font-bold text-gray-800">Camera Roll</h1>
+        </div>
+
+        {/* Image Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-center items-start">
+          {currentImages.map((image, index) => (
+            <div
+              key={index}
+              className="relative group w-64 h-64 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+            >
+              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300" />
+
+              <img
+                src={image}
+                alt=""
+                className="absolute top-0 left-0 w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="mt-8 flex items-center justify-center gap-2">
+            <button
+              onClick={() => paginate(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="p-2 rounded-full bg-white shadow-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+            >
+              <ChevronLeft className="w-5 h-5 text-gray-600" />
+            </button>
+
+            <div className="flex gap-2">
+              {[...Array(totalPages)].map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => paginate(index + 1)}
+                  className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-200 ${
+                    currentPage === index + 1
+                      ? "bg-teal-600 text-white"
+                      : "bg-white text-gray-600 hover:bg-gray-50"
+                  }`}
+                >
+                  {index + 1}
+                </button>
+              ))}
+            </div>
+
+            <button
+              onClick={() => paginate(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="p-2 rounded-full bg-white shadow-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+            >
+              <ChevronRight className="w-5 h-5 text-gray-600" />
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default GallerySection;

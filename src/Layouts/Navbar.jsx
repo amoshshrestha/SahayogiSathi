@@ -29,12 +29,15 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to={"#"} className="hover:text-gray-500">
+            <Link to={"/gallery"} className="hover:text-gray-500">
               Gallery
             </Link>
           </li>
           <li>
-            <a href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o" className="hover:text-gray-500">
+            <a
+              href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o"
+              className="hover:text-gray-500"
+            >
               Donate
             </a>
           </li>
@@ -81,9 +84,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-            <a href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o" className="block">
-              Donate
-            </a>
+              <a
+                href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o"
+                className="block"
+              >
+                Donate
+              </a>
             </li>
             <li>
               <Link to={"/projects"} className="block">

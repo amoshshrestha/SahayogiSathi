@@ -6,6 +6,7 @@ import Index from "./Pages/Index";
 import ContactPage from "./Pages/Contact";
 import Mission from "./Pages/Mission";
 import CurrentProjects from "./Pages/CurrentProjects";
+import Gallery from "./Pages/Gallery";
 
 const MyRoute = () => {
   return (
@@ -18,6 +19,7 @@ const MyRoute = () => {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/mission" element={<Mission />} />
             <Route path="/projects" element={<CurrentProjects />} />
+            <Route path="/gallery" element={<Gallery />} />
           </Route>
         </Routes>
       </BrowserRouter>
