@@ -18,10 +18,8 @@ const projects = [
 ];
 
 const CurrentProjects = () => {
-  const { data: project, isLoading, error } = useProjects();
+  const { data: project } = useProjects();
 
-  // if (isLoading) return <p>Loading projects...</p>;
-  // if (error) return <p>Error fetching projects: {error.message}</p>;
   return (
     <>
       <div className="relative w-full bg-[#FEFDFC] py-16 px-6">
