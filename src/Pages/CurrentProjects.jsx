@@ -3,22 +3,29 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CTASection from "../components/CTASection";
 
-// If you're using a service, you can still use it, but let's keep it simple:
 const useProjects = () => ({ data: [] });
 
-// 1) Define your projects & pastProjects
 const projects = [
   {
+    id: "past-5",
+    title: "College Application Mentoring (Online)",
+    description:
+      "Guided students through the college application process, offering personalized mentoring and support. This initiative helped students access higher education opportunities and navigate the often complex application process to study abroad.",
+  },
+  {
+    
+    id: "current-0",
     title: "Handwashing Station at Bhaktapur School",
     cost: "Rs. 70,000 | $650",
     description:
-      "In a public school at Bhaktapur, Nepal, children face significant challenges due to limited access...",
+      "In a public school at Bhaktapur, Nepal, children face significant challenges due to limited access to water and hygiene facilities. To address this, we aim to construct a handwashing station that will provide students with a reliable and sustainable way to maintain proper hygiene. The project will include a water-efficient system, soap dispensers, and drainage to ensure effective use of resources. Your generous donation will help create a healthier environment for these children, reducing the risk of diseases and empowering them to focus on their education.",
   },
   {
+    id: "current-1",
     title: "Reusable Sanitary Pad Distribution",
     cost: "Rs. 70,000 | $650",
     description:
-      "In a public school at Bhaktapur, Nepal, many girls face challenges in managing their menstrual health...",
+      "In a public school at Bhaktapur, Nepal, many girls face challenges in managing their menstrual health due to a lack of access to sanitary pads and proper awareness. This often leads to discomfort, absenteeism, and even school dropouts. To address this, we aim to distribute sanitary pads and provide menstrual hygiene education to empower young girls. By ensuring they have the resources and knowledge to manage their periods with dignity, we can help them stay in school, improve their confidence, and reduce dropout rates. Your support can transform lives and contribute to a brighter, more equitable future for these girls.",
   },
 ];
 const pastProjects = [
@@ -55,12 +62,7 @@ const pastProjects = [
     description:
       "Collected over 1,500 books through partnerships with two schools and student-led clubs in Kathmandu. These books enriched the resources available at a local learning center in Saptari, supporting students’ education and fostering a love of learning.",
   },
-  {
-    id: "past-5",
-    title: "College Application Mentoring (Online)",
-    description:
-      "Guided students through the college application process, offering personalized mentoring and support. This initiative helped students access higher education opportunities and navigate the often complex application process to study abroad.",
-  },
+  
   {
     id: "past-6",
     title: "Feed the Homeless in New York City",
