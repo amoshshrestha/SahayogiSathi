@@ -19,5 +19,6 @@ export const useProjects = () => {
         queryKey: ['projects'],
         queryFn: fetchProjects,
         staleTime: 1000 * 60 * 5,
+        retry: 2,
     });
 };
