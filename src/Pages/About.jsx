@@ -8,35 +8,26 @@ const About = () => {
     <>
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-10 md:py-20">
-          <div className="text-sm md:text-base uppercase tracking-wide text-gray-600 mb-6 md:mb-10 font-medium">
-            KNOW ABOUT US
-          </div>
+          
 
-          <h1 className="text-3xl md:text-4xl xl:text-5xl font-bold text-foundation-green leading-tight mb-4">
-            We are a Youth and Women-led Foundation.
-          </h1>
+          
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
             <div className="space-y-6 md:space-y-10">
+              
               <div className="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
+              <div className="text-sm md:text-base uppercase tracking-wide text-gray-600  font-medium">
+            ABOUT US
+          </div>
+              <p className="text-1xl md:text-2xl xl:text-2xl font-bold text-foundation-green leading-tight mb-4">
+            We are a Youth and Women-led Foundation.
+          </p>
                 <p className="text-justify">
-                  Established in January 2021 to address the economic hardships
-                  faced by families during the post-COVID era. Many parents lost
-                  their jobs, leaving them unable to afford their children's
-                  education. We believe that no child should be deprived of
-                  schooling due to financial constraints, and this vision drives
-                  our work.
+                  Established in January 2021 ,It was first created to address the economic hardships families face—especially after the COVID-19 pandemic left many unable to afford their children's education. Guided by the belief that no child should be deprived of schooling due to financial constraints, our mission drives every effort we undertake.
                 </p>
 
                 <p className="text-justify">
-                  While based in Kathmandu, our efforts began in
-                  Sindhupalchowk—a region deeply impacted by the 2016 earthquake
-                  and recurrent natural disasters like landslides and floods.
-                  Recognizing the urgent need for support in this area, we
-                  focused our initial projects there, including sponsoring
-                  children's education, distributing clothing and books, and
-                  providing flood relief. Today, we have expanded our efforts to
-                  other regions in Nepal, aiming to make a broader impact.
+                Our journey began in Sindhupalchowk, a region frequently affected by natural disasters such as floods and landslides and deeply impacted by the 2015 earthquake. We saw the region’s ongoing vulnerabilities as a call to action and focused on sponsoring children’s education, distributing clothing and books, and providing disaster relief. Over time, we expanded our efforts to other regions across Nepal, reaching more communities in need.
                 </p>
               </div>
             </div>
@@ -53,17 +44,12 @@ const About = () => {
             </div>
           </div>
 
-          <div className="mt-4 lg:mt-6">
+          {/* <div className="mt-4 lg:mt-6">
             <p className="text-gray-700 leading-relaxed text-base md:text-lg text-justify">
-              Our work is centered on empowering children by addressing their
-              educational, health, and developmental needs. This includes
-              covering school tuition, providing essential resources like books
-              and clothing, conducting menstrual hygiene workshops, and
-              mentoring high school students through college applications. We
-              also aim to support younger children by providing foundational
-              resources to help them succeed in the long term.
+            We aim to empower children by addressing their educational, health, and developmental needs, ensuring they have the foundational resources required to thrive in the long term. We are dedicated to creating systemic changes in education, combating discrimination based on sex, gender, caste, and race, and ensuring every child has the opportunity to succeed in an inclusive and supportive environment.
+
             </p>
-          </div>
+          </div> */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center mt-4 lg:mt-6">
             <div className="relative group">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
@@ -80,14 +66,8 @@ const About = () => {
             <div className="space-y-6 md:space-y-10">
               <div className="space-y-6 text-base md:text-xl text-gray-700 leading-relaxed">
                 <p className="text-justify">
-                  While education is at the heart of our mission, we also
-                  respond to national emergencies such as natural disasters and
-                  public health crises. From disaster relief to addressing
-                  immediate needs, we are committed to supporting vulnerable
-                  communities. Beyond immediate assistance, we strive to create
-                  systemic changes in education, reduce discrimination against
-                  girls, and ensure that every child has the opportunity to
-                  thrive in a supportive and inclusive environment.
+                We aim to empower children by addressing their educational, health, and developmental needs, ensuring they have the foundational resources required to thrive in the long term. We are dedicated to creating systemic changes in education, combating discrimination based on sex, gender, caste, and race, and ensuring every child has the opportunity to succeed in an inclusive and supportive environment.
+
                 </p>
               </div>
             </div>

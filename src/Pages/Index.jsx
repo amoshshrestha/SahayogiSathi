@@ -32,15 +32,11 @@ const Index = () => {
       <div className="flex flex-col lg:flex-row items-center justify-between px-10 lg:px-28 py-16 bg-white text-black">
         <div className="lg:w-1/2">
           <h2 className="text-2xl lg:text-3xl font-bold uppercase tracking-wider border-l-4 border-yellow-500 pl-4 mb-6">
-            Know About Us
+            About Us
           </h2>
-          <p className="text-lg leading-relaxed text-gray-700 text-justify">
-            Sahayogi Saathi is a youth-led and women-led foundation established
-            in January 2021 to address the economic hardships faced by families
-            during the post-COVID era. Many parents lost their jobs, leaving
-            them unable to afford their children's education. We believe that no
-            child should be deprived of schooling due to financial constraints,
-            and this vision drives our work.
+          <p className="text-lg leading-relaxed text-gray-700 text-justify m-9">
+            Sahayogi Saathi, a youth- and women-led foundation established in January 2021, was first created to address the economic hardships families face—especially after the COVID-19 pandemic left many unable to afford their children's education. Guided by the belief that no child should be deprived of schooling due to financial constraints, our mission drives every effort we undertake.
+
           </p>
           <button
             onClick={() => navigate("/about")}
