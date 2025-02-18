@@ -6,7 +6,19 @@ import callbackify from "./../../node_modules/axios/lib/helpers/callbackify";
 const About = () => {
   return (
     <>
-      <div className="min-h-screen bg-white">
+    <div className="relative min-h-screen">
+        {/* SVG as Background */}
+        <img
+          src="/images/svg/about.svg"
+          alt="Gallery Background"
+          className="absolute top-0 left-0 w-full h-full object-cover scale-120 translate-y-28 z-[-1]"
+        />
+        
+        {/* Gallery Content */}
+        <div className="relative z-10">
+      
+      <div className="min-h-screen">
+      
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-10 md:py-20">
           
 
@@ -35,7 +47,7 @@ const About = () => {
                   src="images/cloth-drive.jpg"
                   alt="Image"
                   className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <div className="absolute -bottom-6 -right-6 -left-6 h-32 bg-foundation-beige/30 -z-10 rounded-2xl blur-2xl"></div>
@@ -45,9 +57,9 @@ const About = () => {
           {/* <div className="mt-4 lg:mt-6">
             <p className="text-gray-700 leading-relaxed text-base md:text-lg text-justify">
             We aim to empower children by addressing their educational, health, and developmental needs, ensuring they have the foundational resources required to thrive in the long term. We are dedicated to creating systemic changes in education, combating discrimination based on sex, gender, caste, and race, and ensuring every child has the opportunity to succeed in an inclusive and supportive environment.
-
+            
             </p>
-          </div> */}
+            </div> */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center mt-4 lg:mt-6">
             <div className="relative group">
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
@@ -55,7 +67,7 @@ const About = () => {
                   src="images/bookDonation.jpg"
                   alt="Image"
                   className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <div className="absolute -bottom-6 -right-6 -left-6 h-32 bg-foundation-beige/30 -z-10 rounded-2xl blur-2xl"></div>
@@ -75,38 +87,10 @@ const About = () => {
 
       <CTASection />
       <EventSection />
+                  </div>
+                </div>
     </>
   );
 };
 
 export default About;
-
-// <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-//   <div className="relative group order-2 lg:order-1">
-//     <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-//       <img
-//         src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80"
-//         alt="Women helping in community"
-//         className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
-//       />
-//       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-//     </div>
-//     <div className="absolute -bottom-6 -right-6 -left-6 h-32 bg-foundation-beige/30 -z-10 rounded-2xl blur-2xl"></div>
-//   </div>
-
-//   <div className="order-1 lg:order-2">
-//     <div className="space-y-6 md:space-y-10">
-//       <div className="bg-foundation-beige p-8 rounded-2xl">
-//         <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-//           While education is at the heart of our mission, we also respond to
-//           national emergencies such as natural disasters and public health
-//           crises. From disaster relief to addressing immediate needs, we are
-//           committed to supporting vulnerable communities. Beyond immediate
-//           assistance, we strive to create systemic changes in education, reduce
-//           discrimination against girls, and ensure that every child has the
-//           opportunity to thrive in a supportive and inclusive environment.
-//         </p>
-//       </div>
-//     </div>
-//   </div>
-// </div>;

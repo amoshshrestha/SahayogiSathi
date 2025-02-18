@@ -31,7 +31,7 @@ const GallerySection = () => {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="bg-gradient-to-br from-teal-50 to-amber-50">
+    <div>
       <div className="container mx-auto px-6 md:px-12 py-8 max-w-7xl">
         {/* Header */}
         <div className="flex items-center justify-start px-12 mb-8">
