@@ -6,7 +6,7 @@ const FirstSection = () => {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 text-left">
             <h3 className=" uppercase tracking-widest text-black font-bold mb-2">
-              WHAT OUR MISSION IS
+              MISSION
             </h3>
             <p className="text-gray-800 text-lg leading-relaxed text-justify">
             To empower children in Nepal by ensuring access to education, health resources, and opportunities for growth, fostering an inclusive environment where every child can thrive regardless of their background.
