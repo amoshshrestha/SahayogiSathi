@@ -7,70 +7,27 @@ const useProjects = () => ({ data: [] });
 
 const projects = [
   {
-    id: "past-5",
+    id: "current-0",
     title: "College Application Mentoring (Online)",
     description:
       "Guided students through the college application process, offering personalized mentoring and support. This initiative helped students access higher education opportunities and navigate the often complex application process to study abroad.",
   },
   {
-    
-    id: "current-0",
+
+    id: "current-1",
     title: "Handwashing Station at Bhaktapur School",
     cost: "Rs. 70,000 | $650",
     description:
       "In a public school at Bhaktapur, Nepal, children face significant challenges due to limited access to water and hygiene facilities. To address this, we aim to construct a handwashing station that will provide students with a reliable and sustainable way to maintain proper hygiene. The project will include a water-efficient system, soap dispensers, and drainage to ensure effective use of resources. Your generous donation will help create a healthier environment for these children, reducing the risk of diseases and empowering them to focus on their education.",
   },
   {
-    id: "current-1",
+    id: "current-2",
     title: "Reusable Sanitary Pad Distribution",
     cost: "Rs. 70,000 | $650",
     description:
       "In a public school at Bhaktapur, Nepal, many girls face challenges in managing their menstrual health due to a lack of access to sanitary pads and proper awareness. This often leads to discomfort, absenteeism, and even school dropouts. To address this, we aim to distribute sanitary pads and provide menstrual hygiene education to empower young girls. By ensuring they have the resources and knowledge to manage their periods with dignity, we can help them stay in school, improve their confidence, and reduce dropout rates. Your support can transform lives and contribute to a brighter, more equitable future for these girls.",
   },
 ];
-const pastProjects = [
-  {
-    id: "past-0",
-    title: "Sindhupalchowk Cloth Drive",
-    description:
-      "Distributed 50 large bags of clothing and 3 bags of toys to children and families across three schools in Sindhupalchowk. This initiative aimed to address immediate needs for warm clothing ahead of a harsh winter while fostering joy and creativity among children through the donation of toys.",
-  },
-  {
-    id: "past-1",
-    title: "Sponsor a Child’s Education for a Year",
-    feature: "home page",
-    description:
-      "Raised NRs. 156,147 to sponsor the education of over 50 preschoolers whose parents lost their jobs during and after the COVID-19 pandemic. This initiative ensured financial hardships did not disrupt these children’s access to early education and learning opportunities.",
-  },
-  {
-    id: "past-2",
-    title: "Floodlight Donation at Helambu, Sindhupalchowk",
-    feature: "home page",
-    description:
-      "Partnering with Feed the Hungry Nepal, Sahayogi Sathi fundraised up to NRs. 40,000, providing emergency supplies and floodlights to support flood-affected communities in Helambu, Sindhupalchowk. This effort enhanced safety and met immediate needs during a time of crisis.",
-  },
-  {
-    id: "past-3",
-    title: "Ration Distribution for Flood Victims in Tanahun and Bandipur",
-    description:
-      "Partnering with Feed the Hungry Nepal, Sahayogi Saathi fundraised up to NRs. 30,000 to supply food and tents to flood victims in Tanahun and Bandipur. These resources provided critical relief to families who had lost their homes and belongings due to devastating floods.",
-  },
-  {
-    id: "past-4",
-    title: "Books for a Cause: Saptari Learning Centers",
-    feature: "home page",
-    description:
-      "Collected over 1,500 books through partnerships with two schools and student-led clubs in Kathmandu. These books enriched the resources available at a local learning center in Saptari, supporting students’ education and fostering a love of learning.",
-  },
-  
-  {
-    id: "past-6",
-    title: "Feed the Homeless in New York City",
-    description:
-      "Collected unused food items and cafeteria coupons from students’ dorms before summer break, providing essentials to over 50 homeless individuals in the Washington Square and Union Square Park area.",
-  },
-];
-
 
 const CurrentProjects = () => {
   // 2) If you have a service, you can still call it:
@@ -108,7 +65,7 @@ const CurrentProjects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              id={`current-${index}`}
+              id={`c-${project.id}`}
               className="bg-white p-6 shadow-md rounded-lg"
             >
               <h2 className="text-2xl font-bold text-gray-900">
@@ -123,36 +80,9 @@ const CurrentProjects = () => {
             </div>
           ))}
         </div>
-
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-12 mt-12">
-            Past Projects
-          </h1>
-        </div>
-
-        {/* Past Projects Section */}
-        <div
-          id="past-projects"
-          className="max-w-5xl mx-auto space-y-16 relative z-10"
-        >
-          {pastProjects.map((project, index) => (
-            <div
-              id={`p-${project.id}`}
-              key={index}
-              className="bg-white p-6 shadow-md rounded-lg"
-            >
-              <h2 className="text-2xl font-bold text-gray-900">
-                {project.title}
-              </h2>
-              <p className="text-gray-700 mt-4 leading-7 text-justify">
-                {project.description}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
 
-      <CTASection />
+      
     </>
   );
 };

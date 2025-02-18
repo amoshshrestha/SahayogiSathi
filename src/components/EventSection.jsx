@@ -1,13 +1,21 @@
 import React from "react";
 import { useProjects } from "./../api/service/projectService";
-
+import { Link } from "react-router-dom";
 const projects = [
   {
-    title: "Handwashing Station at Bhaktapur School",
+    id: "current-0",
+    title: "College Application Mentoring (Online)",
+    description:
+      "Guided students through the college application process, offering personalized mentoring and support. This initiative helped students access higher education opportunities and navigate the often complex application process to study abroad.",
     status: "active",
   },
   {
-    title: "Reusable Sanitary Pad Distribution",
+
+    id: "current-1",
+    title: "Handwashing Station at Bhaktapur School",
+    cost: "Rs. 70,000 | $650",
+    description:
+      "In a public school at Bhaktapur, Nepal, children face significant challenges due to limited access to water and hygiene facilities. To address this, we aim to construct a handwashing station that will provide students with a reliable and sustainable way to maintain proper hygiene. The project will include a water-efficient system, soap dispensers, and drainage to ensure effective use of resources. Your generous donation will help create a healthier environment for these children, reducing the risk of diseases and empowering them to focus on their education.",
     status: "active",
   },
 ];
@@ -36,19 +44,14 @@ const EventSection = () => {
                   {project.title}
                 </h3>
                 <div className="flex justify-center gap-3 md:gap-4">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLScGv3xmbebauL3buWnYOwvmM_4mWHDEQQJ7abD8fI-qGbO37w/viewform">
-                    <button className="bg-[#16404D] text-white py-2 px-4 md:px-6 rounded text-sm md:text-base lg:text-lg hover:bg-[#6e8a84]">
-                      Volunteer
-                    </button>
-                  </a>
-                  <a
-                    href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o"
+
+                  <Link to={`/projects#c-${project.id}`}
                     className="hover:text-gray-500"
                   >
                     <button className="bg-[#16404D] text-white py-2 px-4 md:px-6 rounded text-sm md:text-base lg:text-lg hover:bg-[#6e8a84]">
-                      Donate
+                      Learn more...
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

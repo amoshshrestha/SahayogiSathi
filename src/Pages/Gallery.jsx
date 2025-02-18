@@ -6,7 +6,7 @@ const Gallery = () => {
   return (
     <>
       <GallerySection />
-      <CTASection />
+      
     </>
   );
 };

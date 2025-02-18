@@ -11,8 +11,7 @@ const Mission = () => {
       <FirstSection />
       <MissionSection />
       <ProjectsSection />
-      <CTASection />
-      <EventSection />
+      
     </>
   );
 };
