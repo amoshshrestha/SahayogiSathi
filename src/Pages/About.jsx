@@ -16,15 +16,13 @@ const About = () => {
             <div className="space-y-6 md:space-y-10">
               
               <div className="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
-              <div className="text-sm md:text-base uppercase tracking-wide text-gray-600  font-medium">
+              <div className="text-1xl md:text-2xl xl:text-2xl uppercase tracking-wide text-gray-600  font-bold">
             ABOUT US
           </div>
-              <p className="text-1xl md:text-2xl xl:text-2xl font-bold text-foundation-green leading-tight mb-4">
-            We are a Youth and Women-led Foundation.
-          </p>
+              
                 <p className="text-justify">
-                  Established in January 2021 ,It was first created to address the economic hardships families face—especially after the COVID-19 pandemic left many unable to afford their children's education. Guided by the belief that no child should be deprived of schooling due to financial constraints, our mission drives every effort we undertake.
-                </p>
+                Sahayogi Saathi, a youth- and women-led foundation established in January 2021, was first created to address the economic hardships families face—especially after the COVID-19 pandemic left many unable to afford their children's education. Guided by the belief that no child should be deprived of schooling due to financial constraints, our mission drives every effort we undertake.
+                  </p>
 
                 <p className="text-justify">
                 Our journey began in Sindhupalchowk, a region frequently affected by natural disasters such as floods and landslides and deeply impacted by the 2015 earthquake. We saw the region’s ongoing vulnerabilities as a call to action and focused on sponsoring children’s education, distributing clothing and books, and providing disaster relief. Over time, we expanded our efforts to other regions across Nepal, reaching more communities in need.

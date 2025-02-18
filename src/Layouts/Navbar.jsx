@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isProjectsOpen, setIsProjectsOpen] = useState(false);
+
+  const toggleProjects = () => setIsProjectsOpen(!isProjectsOpen);
 
   return (
     <nav className="bg-[#FAF7ED] py-4 px-6 md:px-16 shadow-md">
@@ -41,11 +44,24 @@ const Navbar = () => {
               Donate
             </a>
           </li>
-          <li>
-            <Link to={"/projects"} className="hover:text-gray-500">
-              Projects
-            </Link>
-          </li>
+          <li className="relative group">
+  <Link to="/projects" className="hover:text-gray-500">
+    Projects
+  </Link>
+  <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <li>
+      <Link to="/projects" className="block px-4 py-2 hover:bg-gray-100">
+        Current Projects
+      </Link>
+    </li>
+    <li>
+      <Link to="/pastprojects" className="block px-4 py-2 hover:bg-gray-100">
+        Past Projects
+      </Link>
+    </li>
+  </ul>
+</li>
+
           <li>
             <Link to={"/contact"} className="hover:text-gray-500">
               Contact Us
@@ -79,7 +95,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to={"#"} className="block">
+              <Link to={"/gallery"} className="block">
                 Gallery
               </Link>
             </li>
@@ -92,8 +108,13 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <Link to={"/projects"} className="block">
-                Projects
+              <Link to="/projects" className="block px-4 py-2 hover:bg-gray-100">
+                Current Projects
+              </Link>
+            </li>
+            <li>
+              <Link to="/pastprojects" className="block px-4 py-2 hover:bg-gray-100">
+                Past Projects
               </Link>
             </li>
             <li>
