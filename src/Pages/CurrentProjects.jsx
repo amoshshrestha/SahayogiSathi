@@ -1,9 +1,6 @@
-// CurrentProjects.js
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CTASection from "../components/CTASection";
-
-const useProjects = () => ({ data: [] });
 
 const projects = [
   {
@@ -13,7 +10,6 @@ const projects = [
       "Guided students through the college application process, offering personalized mentoring and support. This initiative helped students access higher education opportunities and navigate the often complex application process to study abroad.",
   },
   {
-
     id: "current-1",
     title: "Handwashing Station at Bhaktapur School",
     cost: "Rs. 70,000 | $650",
@@ -30,15 +26,10 @@ const projects = [
 ];
 
 const CurrentProjects = () => {
-  // 2) If you have a service, you can still call it:
-  const { data: project } = useProjects();
-
-  // 3) Use `useLocation` to watch for hash changes:
   const location = useLocation();
 
   useEffect(() => {
     if (location.hash) {
-      // remove the '#' from the start of location.hash
       const targetId = location.hash.replace("#", "");
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
@@ -48,9 +39,16 @@ const CurrentProjects = () => {
   }, [location]);
 
   return (
-    <>
-      <div className="relative w-full bg-[#FEFDFC] py-16 px-6">
-        {/* Header Title */}
+    <div className="relative w-full py-16 px-6">
+      <div className="absolute inset-0 w-full h-full z-[-1]">
+        <img
+          src="/images/svg/projects.svg"
+          alt="Projects Background"
+          className="w-full h-full object-cover opacity-80 translate-y-28"
+        />
+      </div>
+
+      <div className="relative z-10">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-12">
             Current Projects
@@ -65,15 +63,16 @@ const CurrentProjects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              id={`c-${project.id}`}
-              className="bg-white p-6 shadow-md rounded-lg"
+              id={project.id}
+              className=" p-6 shadow-md rounded-lg backdrop-blur-xs"
+              tabIndex="0"
             >
-              <h2 className="text-2xl font-bold text-gray-900">
-                {project.title}
-              </h2>
-              <h3 className="text-lg font-semibold text-yellow-600 mt-2">
-                {project.cost}
-              </h3>
+              <h2 className="text-2xl font-bold text-gray-900">{project.title}</h2>
+              {project.cost && (
+                <h3 className="text-lg font-semibold text-yellow-600 mt-2">
+                  {project.cost}
+                </h3>
+              )}
               <p className="text-gray-700 mt-4 leading-7 text-justify">
                 {project.description}
               </p>
@@ -82,8 +81,9 @@ const CurrentProjects = () => {
         </div>
       </div>
 
-      
-    </>
+      {/* Call to Action Section */}
+      <CTASection />
+    </div>
   );
 };
 

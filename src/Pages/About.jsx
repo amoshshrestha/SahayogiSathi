@@ -7,12 +7,13 @@ const About = () => {
   return (
     <>
     <div className="relative min-h-screen">
-        {/* SVG as Background */}
+    <div className="absolute inset-0 w-full h-full z-[-1]">
         <img
           src="/images/svg/about.svg"
-          alt="Gallery Background"
-          className="absolute top-0 left-0 w-full h-full object-cover scale-120 translate-y-28 z-[-1]"
+          alt="Projects Background"
+          className="w-full h-full object-cover opacity-80 translate-y-28"
         />
+      </div>
         
         {/* Gallery Content */}
         <div className="relative z-10">

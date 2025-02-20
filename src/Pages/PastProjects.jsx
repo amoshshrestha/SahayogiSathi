@@ -1,10 +1,6 @@
-// CurrentProjects.js
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CTASection from "../components/CTASection";
-
-const useProjects = () => ({ data: [] });
-
 
 const pastProjects = [
   {
@@ -16,14 +12,12 @@ const pastProjects = [
   {
     id: "past-1",
     title: "Sponsor a Child’s Education for a Year",
-    feature: "home page",
     description:
       "Raised NRs. 156,147 to sponsor the education of over 50 preschoolers whose parents lost their jobs during and after the COVID-19 pandemic. This initiative ensured financial hardships did not disrupt these children’s access to early education and learning opportunities.",
   },
   {
     id: "past-2",
     title: "Floodlight Donation at Helambu, Sindhupalchowk",
-    feature: "home page",
     description:
       "Partnering with Feed the Hungry Nepal, Sahayogi Sathi fundraised up to NRs. 40,000, providing emergency supplies and floodlights to support flood-affected communities in Helambu, Sindhupalchowk. This effort enhanced safety and met immediate needs during a time of crisis.",
   },
@@ -36,11 +30,9 @@ const pastProjects = [
   {
     id: "past-4",
     title: "Books for a Cause: Saptari Learning Centers",
-    feature: "home page",
     description:
       "Collected over 1,500 books through partnerships with two schools and student-led clubs in Kathmandu. These books enriched the resources available at a local learning center in Saptari, supporting students’ education and fostering a love of learning.",
   },
-  
   {
     id: "past-6",
     title: "Feed the Homeless in New York City",
@@ -49,17 +41,11 @@ const pastProjects = [
   },
 ];
 
-
 const PastProjects = () => {
-  // 2) If you have a service, you can still call it:
-  const { data: project } = useProjects();
-
-  // 3) Use `useLocation` to watch for hash changes:
   const location = useLocation();
 
   useEffect(() => {
     if (location.hash) {
-      // remove the '#' from the start of location.hash
       const targetId = location.hash.replace("#", "");
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
@@ -69,15 +55,20 @@ const PastProjects = () => {
   }, [location]);
 
   return (
-    <>
-      <div className="relative w-full bg-[#FEFDFC] py-16 px-6">
-        
-        
+    <div className="relative w-full py-16 px-6">
+      {/* SVG Background */}
+      <div className="absolute inset-0 w-full h-full z-[-1]">
+        <img
+          src="/images/svg/projects.svg"
+          alt="Projects Background"
+          className="w-full h-full object-cover opacity-80 translate-y-28"
+        />
+      </div>
 
-        
-
+      {/* Content */}
+      <div className="relative z-10">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-12 mt-12">
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-12">
             Past Projects
           </h1>
         </div>
@@ -89,9 +80,10 @@ const PastProjects = () => {
         >
           {pastProjects.map((project, index) => (
             <div
-              id={`p-${project.id}`}
               key={index}
-              className="bg-white p-6 shadow-md rounded-lg"
+              id={project.id}
+              className="p-6 shadow-md rounded-lg backdrop-blur-xs"
+              tabIndex="0"
             >
               <h2 className="text-2xl font-bold text-gray-900">
                 {project.title}
@@ -104,8 +96,9 @@ const PastProjects = () => {
         </div>
       </div>
 
-      
-    </>
+      {/* Call to Action Section */}
+      <CTASection />
+    </div>
   );
 };
 
