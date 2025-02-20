@@ -96,8 +96,7 @@ const PastProjects = () => {
         </div>
       </div>
 
-      {/* Call to Action Section */}
-      <CTASection />
+      
     </div>
   );
 };

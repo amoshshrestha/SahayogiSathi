@@ -76,8 +76,29 @@ const CurrentProjects = () => {
               <p className="text-gray-700 mt-4 leading-7 text-justify">
                 {project.description}
               </p>
+              {project.id === "current-0" && (
+      <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center items-center text-center">
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeU6h62lMLgJxyWg-h_z4NOctVEOJdsbFKRRWy9XnJG__jc9w/viewform?usp=header"
+        className="hover:text-gray-500"
+      >
+        <button className="px-6 py-3 bg-[#A6CDC6] text-black font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
+          Become a Mentor
+        </button>
+      </a>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfgY8ZZPB087rLcHj7WPucLFnpAl7Q54mb4iQCUStEHyImzGw/viewform?usp=header"
+        className="hover:text-gray-500"
+      >
+        <button className="px-6 py-3 bg-[#A6CDC6] text-black font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
+          Become a Mentee
+        </button>
+      </a>
+    </div>
+    )}
             </div>
           ))}
+          
         </div>
       </div>
 
