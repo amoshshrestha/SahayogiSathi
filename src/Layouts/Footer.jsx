@@ -3,7 +3,7 @@ import logo from "/images/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FBF5DD] py-8 mt-6 w-full">
+    <footer className="bg-[#FBF5DD] py-8 w-full">
       <div className="max-w-screen-xl mx-auto px-6 md:px-12 lg:px-20 flex flex-col items-center gap-12 md:gap-14 lg:gap-16 xl:gap-10">
         {/* Row 1: Logo & Links aligned properly */}
         <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8 md:gap-24 lg:gap-32 xl:gap-64">

@@ -10,7 +10,6 @@ const projects = [
     status: "active",
   },
   {
-
     id: "current-1",
     title: "Handwashing Station at Bhaktapur School",
     cost: "Rs. 70,000 | $650",
@@ -23,7 +22,7 @@ const projects = [
 const EventSection = () => {
   const { data: event } = useProjects();
   return (
-    <div className="relative flex justify-center items-center w-full">
+    <div className="relative flex justify-center items-center w-full pb-6">
       <div className="max-w-screen-xl w-full">
         <div className="flex flex-col md:flex-row items-center mb-8 w-full">
           <h2 className="text-3xl md:text-4xl font-bold text-black text-center lg:text-left">
@@ -44,8 +43,8 @@ const EventSection = () => {
                   {project.title}
                 </h3>
                 <div className="flex justify-center gap-3 md:gap-4">
-
-                  <Link to={`/projects#${project.id}`}
+                  <Link
+                    to={`/projects#${project.id}`}
                     className="hover:text-gray-500"
                   >
                     <button className="bg-[#16404D] text-white py-2 px-4 md:px-6 rounded text-sm md:text-base lg:text-lg hover:bg-[#6e8a84]">
