@@ -45,7 +45,7 @@ const EventSection = () => {
                 </h3>
                 <div className="flex justify-center gap-3 md:gap-4">
 
-                  <Link to={`/projects#c-${project.id}`}
+                  <Link to={`/projects#${project.id}`}
                     className="hover:text-gray-500"
                   >
                     <button className="bg-[#16404D] text-white py-2 px-4 md:px-6 rounded text-sm md:text-base lg:text-lg hover:bg-[#6e8a84]">

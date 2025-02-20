@@ -10,7 +10,7 @@ const ProjectsSection = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Link to="/pastprojects#p-past-0" className="relative rounded-xl overflow-hidden shadow-lg h-64 flex flex-col justify-center items-center text-center p-4 group cursor-pointer">
+          <Link to="/pastprojects#past-0" className="relative rounded-xl overflow-hidden shadow-lg h-64 flex flex-col justify-center items-center text-center p-4 group cursor-pointer">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
               style={{
@@ -25,7 +25,7 @@ const ProjectsSection = () => {
             </div>
           </Link>
 
-          <Link to="/pastprojects#p-past-4" className="relative rounded-xl overflow-hidden shadow-lg h-64 flex flex-col justify-center items-center text-center p-4 group cursor-pointer">
+          <Link to="/pastprojects#past-4" className="relative rounded-xl overflow-hidden shadow-lg h-64 flex flex-col justify-center items-center text-center p-4 group cursor-pointer">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
               style={{
@@ -40,7 +40,7 @@ const ProjectsSection = () => {
             </div>
           </Link>
 
-          <Link to="/pastprojects#p-past-6" className="relative rounded-xl overflow-hidden shadow-lg h-64 flex flex-col justify-center items-center text-center p-4 group cursor-pointer">
+          <Link to="/pastprojects#past-6" className="relative rounded-xl overflow-hidden shadow-lg h-64 flex flex-col justify-center items-center text-center p-4 group cursor-pointer">
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
               style={{
