@@ -30,17 +30,12 @@ export default function ContactPage() {
                 Let&apos;s talk!
               </h3>
               <p className="mt-2 text-lg text-[#1D2130]">
-                Phone number:{" "}
-                <span className="font-medium">sahayogisathi@mail.com</span>
+                Email:{" "}
+                <span className="font-medium">sahayogisaathi@gmail.com</span>
               </p>
               <div className="border-t mt-4 border-gray-300 w-full"></div>
 
-              <h3 className="mt-4 text-xl font-bold text-[#1D2130]">
-                Head Office
-              </h3>
-              <p className="text-lg text-[#525560]">
-                8 Brewery Drive, Lagos, Nigeria.
-              </p>
+              
 
               {/* Social Media Links */}
               <div className="flex space-x-4 mt-4">

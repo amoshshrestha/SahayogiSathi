@@ -15,6 +15,8 @@ const projects = [
     cost: "Rs. 70,000 | $650",
     description:
       "In a public school at Bhaktapur, Nepal, children face significant challenges due to limited access to water and hygiene facilities. To address this, we aim to construct a handwashing station that will provide students with a reliable and sustainable way to maintain proper hygiene. The project will include a water-efficient system, soap dispensers, and drainage to ensure effective use of resources. Your generous donation will help create a healthier environment for these children, reducing the risk of diseases and empowering them to focus on their education.",
+    donationlink: "https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities",
+  
   },
   {
     id: "current-2",
@@ -76,6 +78,16 @@ const CurrentProjects = () => {
               <p className="text-gray-700 mt-4 leading-7 text-justify">
                 {project.description}
               </p>
+              {project.donationlink && (
+                <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center items-center text-center">
+      
+                    <a href={project.donationlink} className="hover:text-gray-500">
+                      <button className="bg-[#A6CDC6] text-black py-2 px-4 md:px-6 rounded text-sm md:text-base lg:text-lg hover:bg-[#6e8a84]">
+                        Donate now
+                      </button>
+                    </a>
+                    </div>
+                  )}
               {project.id === "current-0" && (
       <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center items-center text-center">
       <a

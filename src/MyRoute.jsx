@@ -8,6 +8,10 @@ import Mission from "./Pages/Mission";
 import CurrentProjects from "./Pages/CurrentProjects";
 import Gallery from "./Pages/Gallery";
 import PastProjects from "./Pages/PastProjects";
+import DonatePage from "./Pages/DonatePages/Donate";
+import DonateSuccess from "./Pages/DonatePages/DonateSucess";
+import DonateCancel from "./Pages/DonatePages/DonateCancel";
+import Donate from "./Pages/Donate";
 
 const MyRoute = () => {
   return (
@@ -22,6 +26,14 @@ const MyRoute = () => {
             <Route path="/projects" element={<CurrentProjects />} />
             <Route path="/pastprojects" element={<PastProjects/>} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/donatenow" element={<DonatePage />} />
+            <Route path="/donatesucess" element={<DonateSuccess />} />
+            <Route path="/donatecancel" element={<DonateCancel />} />
+            <Route path="/donate" element={<Donate />} />
+
+
+
+
           </Route>
         </Routes>
       </BrowserRouter>

@@ -49,12 +49,10 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a
-              href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o"
-              className="hover:text-gray-500"
-            >
+          <Link to="/donate" className="hover:text-gray-500">
               Donate
-            </a>
+            </Link>
+            
           </li>
           <li className="relative group">
             <Link to="/projects" className="hover:text-gray-500">
