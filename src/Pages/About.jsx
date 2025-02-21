@@ -33,11 +33,11 @@ const About = () => {
             ABOUT US
           </div>
               
-                <p className="text-justify">
+                <p>
                 Sahayogi Saathi, a youth- and women-led foundation established in January 2021, was first created to address the economic hardships families face—especially after the COVID-19 pandemic left many unable to afford their children's education. Guided by the belief that no child should be deprived of schooling due to financial constraints, our mission drives every effort we undertake.
                   </p>
 
-                <p className="text-justify">
+                <p>
                 Our journey began in Sindhupalchowk, a region frequently affected by natural disasters such as floods and landslides and deeply impacted by the 2015 earthquake. We saw the region’s ongoing vulnerabilities as a call to action and focused on sponsoring children’s education, distributing clothing and books, and providing disaster relief. Over time, we expanded our efforts to other regions across Nepal, reaching more communities in need.
                 </p>
               </div>
@@ -76,7 +76,7 @@ const About = () => {
 
             <div className="space-y-6 md:space-y-10">
               <div className="space-y-6 text-base md:text-xl text-gray-700 leading-relaxed">
-                <p className="text-justify">
+                <p >
                 We aim to empower children by addressing their educational, health, and developmental needs, ensuring they have the foundational resources required to thrive in the long term. We are dedicated to creating systemic changes in education, combating discrimination based on sex, gender, caste, and race, and ensuring every child has the opportunity to succeed in an inclusive and supportive environment.
 
                 </p>
