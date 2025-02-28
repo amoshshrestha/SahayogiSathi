@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CTASection from "../components/CTASection";
-import { useProjects } from "../api/service/projectService";
+import { useBlogs } from "../api/service/projectService";
 
 const project = [
   {
@@ -31,7 +31,7 @@ const project = [
 const CurrentProjects = () => {
   const location = useLocation();
 
-  const { data: projects } = useProjects();
+  const { data: projects } = useBlogs();
   // console.log(projects);
   useEffect(() => {
     if (location.hash) {
@@ -65,46 +65,49 @@ const CurrentProjects = () => {
           id="current-projects"
           className="max-w-5xl mx-auto space-y-16 relative z-10"
         >
-          {projects?.map((project, index) => (
-            <div
-              key={index}
-              id={project.id}
-              className=" p-6 shadow-md rounded-lg backdrop-blur-xs"
-              tabIndex="0"
-            >
-              <h2 className="text-2xl font-bold text-gray-900">
-                {project.title}
-              </h2>
-              {project.cost && (
-                <h3 className="text-lg font-semibold text-yellow-600 mt-2">
-                  {project.cost}
-                </h3>
-              )}
-              <p className="text-gray-700 mt-4 leading-7 text-justify">
-                {project.description}
-              </p>
-              {project.id === "current-0" && (
-                <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center items-center text-center">
-                  <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSeU6h62lMLgJxyWg-h_z4NOctVEOJdsbFKRRWy9XnJG__jc9w/viewform?usp=header"
-                    className="hover:text-gray-500"
-                  >
-                    <button className="px-6 py-3 bg-[#A6CDC6] text-black font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
-                      Become a Mentor
-                    </button>
-                  </a>
-                  <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSfgY8ZZPB087rLcHj7WPucLFnpAl7Q54mb4iQCUStEHyImzGw/viewform?usp=header"
-                    className="hover:text-gray-500"
-                  >
-                    <button className="px-6 py-3 bg-[#A6CDC6] text-black font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
-                      Become a Mentee
-                    </button>
-                  </a>
-                </div>
-              )}
-            </div>
-          ))}
+          {projects
+            ?.filter((project) => project.status === "active")
+            .map((project, index) => (
+              <div
+                key={index}
+                id={project.id}
+                className=" p-6 shadow-md rounded-lg backdrop-blur-xs"
+                tabIndex="0"
+              >
+                <h2 className="text-2xl font-bold text-gray-900">
+                  {project.title}
+                </h2>
+                {project.cost && (
+                  <h3 className="text-lg font-semibold text-yellow-600 mt-2">
+                    {project.cost}
+                  </h3>
+                )}
+
+                <p className="text-gray-700 mt-4 leading-7 text-justify">
+                  {project.description}
+                </p>
+                {project.id === 29 && (
+                  <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center items-center text-center">
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSeU6h62lMLgJxyWg-h_z4NOctVEOJdsbFKRRWy9XnJG__jc9w/viewform?usp=header"
+                      className="hover:text-gray-500"
+                    >
+                      <button className="px-6 py-3 bg-[#A6CDC6] text-black font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
+                        Become a Mentor
+                      </button>
+                    </a>
+                    <a
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSfgY8ZZPB087rLcHj7WPucLFnpAl7Q54mb4iQCUStEHyImzGw/viewform?usp=header"
+                      className="hover:text-gray-500"
+                    >
+                      <button className="px-6 py-3 bg-[#A6CDC6] text-black font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
+                        Become a Mentee
+                      </button>
+                    </a>
+                  </div>
+                )}
+              </div>
+            ))}
         </div>
       </div>
 

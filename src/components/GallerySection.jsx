@@ -1,32 +1,17 @@
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, Camera } from "lucide-react";
-
-const images = [
-  "/images/cameraroll/2.jpg",
-  "/images/cameraroll/1.jpg",
-  "/images/cameraroll/3.jpg",
-  "/images/cameraroll/4.jpg",
-  "/images/cameraroll/5.jpg",
-  "/images/cameraroll/6.jpg",
-  "/images/cameraroll/7.jpg",
-  "/images/cameraroll/8.jpg",
-  "/images/cameraroll/9.jpg",
-  "/images/cameraroll/10.jpg",
-  "/images/cameraroll/11.jpg",
-  "/images/cameraroll/11.jpg",
-  "/images/cameraroll/11.jpg",
-  "/images/cameraroll/11.jpg",
-  "/images/cameraroll/11.jpg",
-];
+import { useGallery } from "../api/service/galleryServive";
 
 const GallerySection = () => {
+  const { data: images } = useGallery();
+
   const [currentPage, setCurrentPage] = useState(1);
   const imagesPerPage = 12;
-  const totalPages = Math.ceil(images.length / imagesPerPage);
+  const totalPages = Math.ceil(images?.length / imagesPerPage);
 
   const indexOfLastImage = currentPage * imagesPerPage;
   const indexOfFirstImage = indexOfLastImage - imagesPerPage;
-  const currentImages = images.slice(indexOfFirstImage, indexOfLastImage);
+  const currentImages = images?.slice(indexOfFirstImage, indexOfLastImage);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -42,15 +27,15 @@ const GallerySection = () => {
         {/* Image Grid */}
         <div className="flex flex-wrap justify-center gap-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 px-8 sm:px-0">
-            {currentImages.map((image, index) => (
+            {images?.map((image, index) => (
               <div
                 key={index}
                 className="relative group w-full h-auto sm:w-64 sm:h-76 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
               >
                 <div className="sm:absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300" />
                 <img
-                  src={image}
-                  alt=""
+                  src={`https://api.sahayogisaathi.org${image.imageurl}`}
+                  alt={image.title}
                   className="sm:absolute top-0 left-0 w-full h-full object-cover rounded-lg"
                 />
               </div>

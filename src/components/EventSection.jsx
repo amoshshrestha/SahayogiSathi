@@ -16,7 +16,8 @@ const projects = [
     description:
       "In a public school at Bhaktapur, Nepal, children face significant challenges due to limited access to water and hygiene facilities. To address this, we aim to construct a handwashing station that will provide students with a reliable and sustainable way to maintain proper hygiene. The project will include a water-efficient system, soap dispensers, and drainage to ensure effective use of resources. Your generous donation will help create a healthier environment for these children, reducing the risk of diseases and empowering them to focus on their education.",
     status: "active",
-    donationlink: "https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities",
+    donationlink:
+      "https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities",
   },
 ];
 
@@ -47,7 +48,10 @@ const EventSection = () => {
                 </h3>
                 <div className="flex justify-center gap-3 md:gap-4">
                   {project.donationlink && (
-                    <a href={project.donationlink} className="hover:text-gray-500">
+                    <a
+                      href={project.donationlink}
+                      className="hover:text-gray-500"
+                    >
                       <button className="bg-[#16404D] text-white py-2 px-4 md:px-6 rounded text-sm md:text-base lg:text-lg hover:bg-[#6e8a84]">
                         Donate now
                       </button>

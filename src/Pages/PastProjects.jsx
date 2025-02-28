@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CTASection from "../components/CTASection";
+import { useBlogs } from "../api/service/projectService";
 
-const pastProjects = [
+const pastProject = [
   {
     id: "past-0",
     title: "Sindhupalchowk Cloth Drive",
@@ -43,6 +44,7 @@ const pastProjects = [
 
 const PastProjects = () => {
   const location = useLocation();
+  const { data: pastProjects } = useBlogs();
 
   useEffect(() => {
     if (location.hash) {
@@ -78,25 +80,42 @@ const PastProjects = () => {
           id="past-projects"
           className="max-w-5xl mx-auto space-y-16 relative z-10"
         >
-          {pastProjects.map((project, index) => (
-            <div
-              key={index}
-              id={project.id}
-              className="p-6 shadow-md rounded-lg backdrop-blur-xs"
-              tabIndex="0"
-            >
-              <h2 className="text-2xl font-bold text-gray-900">
-                {project.title}
-              </h2>
-              <p className="text-gray-700 mt-4 leading-7 text-justify">
-                {project.description}
-              </p>
-            </div>
-          ))}
+          {pastProjects
+            ?.filter((project) => project.status === "completed")
+            ?.map((project, index) => (
+              <div
+                key={index}
+                id={project.id}
+                className="p-6 shadow-md rounded-lg backdrop-blur-xs"
+                tabIndex="0"
+              >
+                <h2 className="text-2xl font-bold text-gray-900">
+                  {project.title}
+                </h2>
+                <p className="text-gray-700 mt-4 leading-7 text-justify">
+                  {project.description}
+                </p>
+                {/* Image Display Logic */}
+                <div className="mt-4 flex justify-center gap-4">
+                  {project.image1 && (
+                    <img
+                      src={`https://api.sahayogisaathi.org${project.image1}`}
+                      alt="Project Image 1"
+                      className="w-32 h-32 object-cover rounded-md shadow-md"
+                    />
+                  )}
+                  {project.image2 && (
+                    <img
+                      src={`https://api.sahayogisaathi.org${project.image2}`}
+                      alt="Project Image 2"
+                      className="w-32 h-32 object-cover rounded-md shadow-md"
+                    />
+                  )}
+                </div>
+              </div>
+            ))}
         </div>
       </div>
-
-      
     </div>
   );
 };

@@ -26,7 +26,7 @@ const Navbar = () => {
           </li>
 
           <li className="relative group">
-            <Link to="/projects" className="hover:text-gray-500">
+            <Link to="/about" className="hover:text-gray-500">
               About us
             </Link>
             <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
