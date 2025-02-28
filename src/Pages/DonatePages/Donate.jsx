@@ -14,22 +14,36 @@ function DonatePage() {
       setLoading(true);
       const stripe = await stripePromise;
       // Replace with your actual PHP endpoint URL:
-      const response = await fetch("https://YOUR-PHP-SERVER.com/create-checkout-session.php", {
+      // const response = await fetch("https://YOUR-PHP-SERVER.com/create-checkout-session.php", {
+      const response = await fetch("https://api.sahayogisaathi.org/payments/create.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ amount: donationAmount }),
+        body: JSON.stringify({ amount: donationAmount, currency: "usd", email: "test@example.com"}),
       });
 
       if (!response.ok) {
         throw new Error("Failed to create Stripe Checkout session");
       }
 
-      const session = await response.json();
-      // Redirect to Stripe Checkout
-      const result = await stripe.redirectToCheckout({ sessionId: session.id });
-      if (result.error) {
-        alert(result.error.message);
-      }
+    //   const session = await response.json();
+    //   // Redirect to Stripe Checkout
+    //   const result = await stripe.redirectToCheckout({ sessionId: session.id });
+    //   if (result.error) {
+    //     alert(result.error.message);
+    //   }
+    // } catch (error) {
+    //   console.error("Error creating Checkout Session:", error);
+    //   alert("There was an error processing your donation.");
+    // } finally {
+    //   setLoading(false);
+    // }
+    const session = await response.json();
+    
+    if (!session.url) {
+      throw new Error("Session URL missing from response");
+    }
+
+    window.location.href = session.url; // Redirect to Stripe Checkout
     } catch (error) {
       console.error("Error creating Checkout Session:", error);
       alert("There was an error processing your donation.");

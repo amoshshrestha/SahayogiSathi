@@ -27,7 +27,7 @@ const MyRoute = () => {
             <Route path="/pastprojects" element={<PastProjects />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/donatenow" element={<DonatePage />} />
-            <Route path="/donatesucess" element={<DonateSuccess />} />
+            <Route path="/donatesuccess" element={<DonateSuccess />} />
             <Route path="/donatecancel" element={<DonateCancel />} />
             <Route path="/donate" element={<Donate />} />
 
