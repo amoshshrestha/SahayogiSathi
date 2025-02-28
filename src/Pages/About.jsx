@@ -36,7 +36,7 @@ const About = () => {
                       constraints, our mission drives every effort we undertake.
                     </p>
 
-                    <p className="text-justify">
+                    <p className="">
                       Our journey began in Sindhupalchowk, a region frequently
                       affected by natural disasters such as floods and
                       landslides and deeply impacted by the 2015 earthquake. We
@@ -82,7 +82,7 @@ const About = () => {
 
                 <div className="space-y-6 md:space-y-10">
                   <div className="space-y-6 text-base md:text-xl text-gray-700 leading-relaxed">
-                    <p className="text-justify">
+                    <p className="">
                       We aim to empower children by addressing their
                       educational, health, and developmental needs, ensuring
                       they have the foundational resources required to thrive in

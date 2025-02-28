@@ -8,7 +8,7 @@ const FirstSection = () => {
             <h3 className=" uppercase tracking-widest text-black font-bold mb-2">
               MISSION
             </h3>
-            <p className="text-gray-800 text-lg leading-relaxed text-justify">
+            <p className="text-gray-800 text-lg leading-relaxed">
               To empower children in Nepal by ensuring access to education,
               health resources, and opportunities for growth, fostering an
               inclusive environment where every child can thrive regardless of
