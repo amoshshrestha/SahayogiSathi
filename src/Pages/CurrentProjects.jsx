@@ -70,7 +70,7 @@ const CurrentProjects = () => {
             .map((project, index) => (
               <div
                 key={index}
-                id={project.id}
+                id={`current-${project.id}`}
                 className=" p-6 shadow-md rounded-lg backdrop-blur-xs"
                 tabIndex="0"
               >
@@ -86,7 +86,7 @@ const CurrentProjects = () => {
                 <p className="text-gray-700 mt-4 leading-7 text-justify">
                   {project.description}
                 </p>
-                {project.id === 29 && (
+                {project.id === 39 && (
                   <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center items-center text-center">
                     <a
                       href="https://docs.google.com/forms/d/e/1FAIpQLSeU6h62lMLgJxyWg-h_z4NOctVEOJdsbFKRRWy9XnJG__jc9w/viewform?usp=header"

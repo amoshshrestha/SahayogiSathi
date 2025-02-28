@@ -1,8 +1,9 @@
 import React from "react";
 import CTASection from "../components/CTASection";
 import EventSection from "../components/EventSection";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import ProjectsSection from "../components/missionComponents/ProjectSection";
+
 
 const Index = () => {
   const navigate = useNavigate();
@@ -14,14 +15,13 @@ const Index = () => {
           <h1 className="text-white text-5xl font-bold mb-6">
             Donate For a Cause
           </h1>
-          <a
-            href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o"
+          <Link to="/donate"
             className="hover:text-gray-500"
           >
             <button className="bg-[#A6CDC6] text-[#16404D] text-lg font-medium px-6 py-3 rounded-md hover:bg-[#8fb6af]">
               Donate Now
             </button>
-          </a>
+          </Link>
         </div>
         <div
           className="absolute inset-0 bg-cover bg-center opacity-60"

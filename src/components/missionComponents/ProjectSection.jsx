@@ -11,7 +11,7 @@ const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Link
-            to="/pastprojects#past-0"
+            to="/pastprojects#past-30"
             className="relative rounded-xl overflow-hidden shadow-lg h-64 flex flex-col justify-center items-center text-center p-4 group cursor-pointer"
           >
             <div
@@ -31,7 +31,7 @@ const ProjectsSection = () => {
           </Link>
 
           <Link
-            to="/pastprojects#past-4"
+            to="/pastprojects#past-34"
             className="relative rounded-xl overflow-hidden shadow-lg h-64 flex flex-col justify-center items-center text-center p-4 group cursor-pointer"
           >
             <div
@@ -51,13 +51,13 @@ const ProjectsSection = () => {
           </Link>
 
           <Link
-            to="/pastprojects#past-6"
+            to="/pastprojects#past-32"
             className="relative rounded-xl overflow-hidden shadow-lg h-64 flex flex-col justify-center items-center text-center p-4 group cursor-pointer"
           >
             <div
               className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105 group-hover:opacity-100"
               style={{
-                backgroundImage: "url('/images/feedthehomeless.jpeg')",
+                backgroundImage: "url('/images/Floodlightdonation.JPG')",
                 opacity: 0.8,
                 filter: "brightness(50%)",
               }}
@@ -65,7 +65,7 @@ const ProjectsSection = () => {
             <div className="absolute inset-0 bg-black/30 transition-opacity duration-500 group-hover:opacity-0"></div>
             <div className="relative z-10 text-white p-4 rounded-lg">
               <h3 className="text-2xl font-bold transition-transform duration-500 group-hover:scale-110">
-                Feed the Homeless
+              Floodlight Donation at Helambu, Sindhupalchowk
               </h3>
             </div>
           </Link>

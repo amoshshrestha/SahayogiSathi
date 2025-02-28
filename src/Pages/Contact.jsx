@@ -35,7 +35,7 @@ const ContactPage = () => {
       onError: (error) => {
         toast.error(
           error.response?.data?.message ||
-            "An error occurred while sending the message."
+          "An error occurred while sending the message."
         );
       },
     });
@@ -70,19 +70,19 @@ const ContactPage = () => {
               </h3>
               <p className="mt-2 text-lg text-[#1D2130]">
                 Email:{" "}
-                <span className="font-medium">sahayogisaathi@gmail.com</span>
+                <span className="font-medium">sahayogisaathi21@gmail.com</span>
               </p>
               <div className="border-t mt-4 border-gray-300 w-full"></div>
 
               <div className="flex space-x-4 mt-4">
-                <a href="#" className="text-[#1D2130] text-xl">
+                <a href="https://www.facebook.com/profile.php?id=100081288945979" className="text-[#1D2130] text-xl">
                   <i className="fab fa-facebook"></i>
                 </a>
-                <a href="#" className="text-[#1D2130] text-xl">
-                  <i className="fab fa-twitter"></i>
+                <a href="https://www.instagram.com/sahayogisaathi/" className="text-[#1D2130] text-xl">
+                  <i className="fab fa-instagram"></i>
                 </a>
-                <a href="#" className="text-[#1D2130] text-xl">
-                  <i className="fab fa-linkedin"></i>
+                <a href="tel:+1 929 471 3720 " className="text-[#1D2130] text-xl">
+                  <i className="fas fa-phone"></i>
                 </a>
               </div>
             </div>

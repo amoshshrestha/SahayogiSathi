@@ -3,14 +3,14 @@ import { useBlogs } from "./../api/service/projectService";
 import { Link } from "react-router-dom";
 const projects = [
   {
-    id: "current-0",
+    id: "current-39",
     title: "College Application Mentoring (Online)",
     description:
       "Guided students through the college application process, offering personalized mentoring and support. This initiative helped students access higher education opportunities and navigate the often complex application process to study abroad.",
     status: "active",
   },
   {
-    id: "current-1",
+    id: "current-37",
     title: "Handwashing Station at Bhaktapur School",
     cost: "Rs. 70,000 | $650",
     description:

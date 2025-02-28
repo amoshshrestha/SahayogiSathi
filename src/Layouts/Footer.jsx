@@ -22,7 +22,7 @@ const Footer = () => {
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-2 w-full sm:w-auto">
               <h3 className="text-lg font-bold text-[#16404D]">Home</h3>
               <a href="/about" className="text-[#525560] text-md">
-                About us
+                Vision
               </a>
               <a href="/mission" className="text-[#525560] text-md">
                 Mission
@@ -38,38 +38,36 @@ const Footer = () => {
             {/* Column 2 */}
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-2 w-full sm:w-auto">
               <h3 className="text-lg font-bold text-[#16404D]">More</h3>
-              <a href="/projects" className="text-[#525560] text-md">
-                Projects
+              <a href="/pastprojects" className="text-[#525560] text-md">
+                Past Projects
               </a>
-              <a href="#events" className="text-[#525560] text-md">
-                Events
+              <a href="/projects" className="text-[#525560] text-md">
+                Current Projects
               </a>
               <a
-                href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o"
+                href="/donatenow"
                 className="text-[#525560] text-md"
               >
                 Donate
               </a>
-              <a href="#blog" className="text-[#525560] text-md">
-                Blog
+              <a href="/contact" className="text-[#525560] text-md">
+                Contact us
               </a>
             </div>
 
             {/* Column 3 */}
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-2 w-full sm:w-auto">
               <h3 className="text-lg font-bold text-[#16404D]">Connect</h3>
-              <a href="#facebook" className="text-[#525560] text-md">
-                Facebook
+              <a href="https://www.facebook.com/profile.php?id=100081288945979" className="text-[#525560] text-md">
+              <i className="fab fa-facebook"></i> Facebook
               </a>
-              <a href="#instagram" className="text-[#525560] text-md">
-                Instagram
+              <a href="https://www.instagram.com/sahayogisaathi/" className="text-[#525560] text-md">
+              <i className="fab fa-instagram"></i> Instagram
               </a>
-              <a href="#twitter" className="text-[#525560] text-md">
-                Twitter
+              <a href="tel:+1 929 471 3720 " className="text-[#525560] text-md">
+              <i className="fas fa-phone"></i> Phone
               </a>
-              <a href="#linkedin" className="text-[#525560] text-md">
-                LinkedIn
-              </a>
+              
             </div>
           </div>
         </div>

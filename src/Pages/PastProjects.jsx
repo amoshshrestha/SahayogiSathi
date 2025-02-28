@@ -3,44 +3,6 @@ import { useLocation } from "react-router-dom";
 import CTASection from "../components/CTASection";
 import { useBlogs } from "../api/service/projectService";
 
-const pastProject = [
-  {
-    id: "past-0",
-    title: "Sindhupalchowk Cloth Drive",
-    description:
-      "Distributed 50 large bags of clothing and 3 bags of toys to children and families across three schools in Sindhupalchowk. This initiative aimed to address immediate needs for warm clothing ahead of a harsh winter while fostering joy and creativity among children through the donation of toys.",
-  },
-  {
-    id: "past-1",
-    title: "Sponsor a Child’s Education for a Year",
-    description:
-      "Raised NRs. 156,147 to sponsor the education of over 50 preschoolers whose parents lost their jobs during and after the COVID-19 pandemic. This initiative ensured financial hardships did not disrupt these children’s access to early education and learning opportunities.",
-  },
-  {
-    id: "past-2",
-    title: "Floodlight Donation at Helambu, Sindhupalchowk",
-    description:
-      "Partnering with Feed the Hungry Nepal, Sahayogi Sathi fundraised up to NRs. 40,000, providing emergency supplies and floodlights to support flood-affected communities in Helambu, Sindhupalchowk. This effort enhanced safety and met immediate needs during a time of crisis.",
-  },
-  {
-    id: "past-3",
-    title: "Ration Distribution for Flood Victims in Tanahun and Bandipur",
-    description:
-      "Partnering with Feed the Hungry Nepal, Sahayogi Saathi fundraised up to NRs. 30,000 to supply food and tents to flood victims in Tanahun and Bandipur. These resources provided critical relief to families who had lost their homes and belongings due to devastating floods.",
-  },
-  {
-    id: "past-4",
-    title: "Books for a Cause: Saptari Learning Centers",
-    description:
-      "Collected over 1,500 books through partnerships with two schools and student-led clubs in Kathmandu. These books enriched the resources available at a local learning center in Saptari, supporting students’ education and fostering a love of learning.",
-  },
-  {
-    id: "past-6",
-    title: "Feed the Homeless in New York City",
-    description:
-      "Collected unused food items and cafeteria coupons from students’ dorms before summer break, providing essentials to over 50 homeless individuals in the Washington Square and Union Square Park area.",
-  },
-];
 
 const PastProjects = () => {
   const location = useLocation();
@@ -76,46 +38,60 @@ const PastProjects = () => {
         </div>
 
         {/* Past Projects Section */}
-        <div
-          id="past-projects"
-          className="max-w-5xl mx-auto space-y-16 relative z-10"
-        >
+        <div id="past-projects" className="max-w-5xl mx-auto space-y-16 relative z-10">
           {pastProjects
             ?.filter((project) => project.status === "completed")
-            ?.map((project, index) => (
-              <div
-                key={index}
-                id={project.id}
-                className="p-6 shadow-md rounded-lg backdrop-blur-xs"
-                tabIndex="0"
-              >
-                <h2 className="text-2xl font-bold text-gray-900">
-                  {project.title}
-                </h2>
-                <p className="text-gray-700 mt-4 leading-7 text-justify">
-                  {project.description}
-                </p>
-                {/* Image Display Logic */}
-                <div className="mt-4 flex justify-center gap-4">
-                  {project.image1 && (
-                    <img
-                      src={`https://api.sahayogisaathi.org${project.image1}`}
-                      alt="Project Image 1"
-                      className="w-32 h-32 object-cover rounded-md shadow-md"
-                    />
+            ?.map((project, index) => {
+              // Extract available images
+              const images = [project.image1, project.image2].filter(Boolean);
+              const hasOneImage = images.length === 1;
+              const hasTwoImages = images.length === 2;
+
+              return (
+                <div
+                  key={index}
+                  id={`past-${project.id}`}
+                  className={`p-6 shadow-md rounded-lg backdrop-blur-xs flex flex-col ${hasOneImage ? "md:flex-row" : "flex-col"
+                    } gap-4`}
+                  tabIndex="0"
+                >
+                  {/* Description */}
+                  <div className={`flex-1 ${hasOneImage ? "md:w-2/3" : "w-full"}`}>
+                    <h2 className="text-2xl font-bold text-gray-900">{project.title}</h2>
+                    <p className="text-gray-700 mt-4 leading-7 text-justify">{project.description}</p>
+                  </div>
+
+                  {/* Image Display Logic */}
+                  {hasOneImage && (
+                    <div className="w-full md:w-1/3 flex justify-center md:justify-end">
+                      <img
+                        src={`https://api.sahayogisaathi.org${images[0]}`}
+                        alt="Project Image"
+                        className="w-full md:w-60 h-auto object-cover rounded-md shadow-md"
+                      />
+                    </div>
                   )}
-                  {project.image2 && (
-                    <img
-                      src={`https://api.sahayogisaathi.org${project.image2}`}
-                      alt="Project Image 2"
-                      className="w-32 h-32 object-cover rounded-md shadow-md"
-                    />
+
+                  {hasTwoImages && (
+                    <div className="w-full mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
+                      {images.map((image, imgIndex) => (
+                        <img
+                          key={imgIndex}
+                          src={`https://api.sahayogisaathi.org${image}`}
+                          alt={`Project Image ${imgIndex + 1}`}
+                          className="w-full md:w-72 h-auto max-h-72 object-cover rounded-md shadow-md"
+                        />
+                      ))}
+                    </div>
                   )}
+
                 </div>
-              </div>
-            ))}
+              );
+            })}
         </div>
+
       </div>
+
     </div>
   );
 };
