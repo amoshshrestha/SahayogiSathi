@@ -1,5 +1,5 @@
 import React from "react";
-import { useProjects } from "./../api/service/projectService";
+import { useBlogs } from "./../api/service/projectService";
 import { Link } from "react-router-dom";
 const projects = [
   {
@@ -21,7 +21,9 @@ const projects = [
 ];
 
 const EventSection = () => {
-  const { data: event } = useProjects();
+  const { data: blog } = useBlogs();
+
+  console.log(blog);
   return (
     <div className="relative flex justify-center items-center w-full pb-6">
       <div className="max-w-screen-xl w-full">

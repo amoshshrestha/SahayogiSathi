@@ -34,9 +34,13 @@ const Index = () => {
           <h2 className="text-2xl lg:text-3xl font-bold uppercase tracking-wider border-l-4 border-yellow-500 pl-4 mb-6">
             About Us
           </h2>
-          <p className="text-lg leading-relaxed text-gray-700 m-9">
-            Sahayogi Saathi, a youth- and women-led foundation established in January 2021, was first created to address the economic hardships families face—especially after the COVID-19 pandemic left many unable to afford their children's education. Guided by the belief that no child should be deprived of schooling due to financial constraints, our mission drives every effort we undertake.
-
+          <p className="text-lg leading-relaxed text-gray-700 text-justify m-9">
+            Sahayogi Saathi, a youth- and women-led foundation established in
+            January 2021, was first created to address the economic hardships
+            families face—especially after the COVID-19 pandemic left many
+            unable to afford their children's education. Guided by the belief
+            that no child should be deprived of schooling due to financial
+            constraints, our mission drives every effort we undertake.
           </p>
           <button
             onClick={() => navigate("/about")}

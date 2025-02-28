@@ -9,7 +9,10 @@ const FirstSection = () => {
               MISSION
             </h3>
             <p className="text-gray-800 text-lg leading-relaxed text-justify">
-            To empower children in Nepal by ensuring access to education, health resources, and opportunities for growth, fostering an inclusive environment where every child can thrive regardless of their background.
+              To empower children in Nepal by ensuring access to education,
+              health resources, and opportunities for growth, fostering an
+              inclusive environment where every child can thrive regardless of
+              their background.
             </p>
             {/* <p className="text-gray-800 text-lg leading-relaxed mt-4 text-justify">
               In addition to our educational initiatives, we are committed to

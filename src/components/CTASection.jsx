@@ -14,16 +14,21 @@ const CTASection = () => {
             Invest in Nepal's future - empower children with education.
           </h2>
           <div className="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScGv3xmbebauL3buWnYOwvmM_4mWHDEQQJ7abD8fI-qGbO37w/viewform" className="hover:text-gray-500">
-            <button className="px-6 py-3 bg-yellow-400 text-black font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
-              
-              Join as a Volunteer
-            </button>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScGv3xmbebauL3buWnYOwvmM_4mWHDEQQJ7abD8fI-qGbO37w/viewform"
+              className="hover:text-gray-500"
+            >
+              <button className="px-6 py-3 bg-yellow-400 text-black font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
+                Join as a Volunteer
+              </button>
             </a>
-            <a href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o" className="hover:text-gray-500">
-            <button className="px-6 py-3 bg-[#16404D] text-white font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
-             Donate
-            </button>
+            <a
+              href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o"
+              className="hover:text-gray-500"
+            >
+              <button className="px-6 py-3 bg-[#16404D] text-white font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
+                Donate
+              </button>
             </a>
           </div>
         </div>

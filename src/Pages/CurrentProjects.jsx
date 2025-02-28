@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import CTASection from "../components/CTASection";
+import { useProjects } from "../api/service/projectService";
 
-const projects = [
+const project = [
   {
     id: "current-0",
     title: "College Application Mentoring (Online)",
@@ -15,8 +16,8 @@ const projects = [
     cost: "Rs. 70,000 | $650",
     description:
       "In a public school at Bhaktapur, Nepal, children face significant challenges due to limited access to water and hygiene facilities. To address this, we aim to construct a handwashing station that will provide students with a reliable and sustainable way to maintain proper hygiene. The project will include a water-efficient system, soap dispensers, and drainage to ensure effective use of resources. Your generous donation will help create a healthier environment for these children, reducing the risk of diseases and empowering them to focus on their education.",
-    donationlink: "https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities",
-  
+    donationlink:
+      "https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities",
   },
   {
     id: "current-2",
@@ -30,6 +31,8 @@ const projects = [
 const CurrentProjects = () => {
   const location = useLocation();
 
+  const { data: projects } = useProjects();
+  // console.log(projects);
   useEffect(() => {
     if (location.hash) {
       const targetId = location.hash.replace("#", "");
@@ -62,14 +65,16 @@ const CurrentProjects = () => {
           id="current-projects"
           className="max-w-5xl mx-auto space-y-16 relative z-10"
         >
-          {projects.map((project, index) => (
+          {projects?.map((project, index) => (
             <div
               key={index}
               id={project.id}
               className=" p-6 shadow-md rounded-lg backdrop-blur-xs"
               tabIndex="0"
             >
-              <h2 className="text-2xl font-bold text-gray-900">{project.title}</h2>
+              <h2 className="text-2xl font-bold text-gray-900">
+                {project.title}
+              </h2>
               {project.cost && (
                 <h3 className="text-lg font-semibold text-yellow-600 mt-2">
                   {project.cost}
@@ -78,39 +83,28 @@ const CurrentProjects = () => {
               <p className="text-gray-700 mt-4 leading-7 text-justify">
                 {project.description}
               </p>
-              {project.donationlink && (
-                <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center items-center text-center">
-      
-                    <a href={project.donationlink} className="hover:text-gray-500">
-                      <button className="bg-[#A6CDC6] text-black py-2 px-4 md:px-6 rounded text-sm md:text-base lg:text-lg hover:bg-[#6e8a84]">
-                        Donate now
-                      </button>
-                    </a>
-                    </div>
-                  )}
               {project.id === "current-0" && (
-      <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center items-center text-center">
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSeU6h62lMLgJxyWg-h_z4NOctVEOJdsbFKRRWy9XnJG__jc9w/viewform?usp=header"
-        className="hover:text-gray-500"
-      >
-        <button className="px-6 py-3 bg-[#A6CDC6] text-black font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
-          Become a Mentor
-        </button>
-      </a>
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSfgY8ZZPB087rLcHj7WPucLFnpAl7Q54mb4iQCUStEHyImzGw/viewform?usp=header"
-        className="hover:text-gray-500"
-      >
-        <button className="px-6 py-3 bg-[#A6CDC6] text-black font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
-          Become a Mentee
-        </button>
-      </a>
-    </div>
-    )}
+                <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center items-center text-center">
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeU6h62lMLgJxyWg-h_z4NOctVEOJdsbFKRRWy9XnJG__jc9w/viewform?usp=header"
+                    className="hover:text-gray-500"
+                  >
+                    <button className="px-6 py-3 bg-[#A6CDC6] text-black font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
+                      Become a Mentor
+                    </button>
+                  </a>
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfgY8ZZPB087rLcHj7WPucLFnpAl7Q54mb4iQCUStEHyImzGw/viewform?usp=header"
+                    className="hover:text-gray-500"
+                  >
+                    <button className="px-6 py-3 bg-[#A6CDC6] text-black font-medium text-base md:text-lg rounded-md hover:bg-[#8fb6af]">
+                      Become a Mentee
+                    </button>
+                  </a>
+                </div>
+              )}
             </div>
           ))}
-          
         </div>
       </div>
 

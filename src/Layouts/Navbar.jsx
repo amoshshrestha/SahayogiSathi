@@ -24,14 +24,17 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          
+
           <li className="relative group">
             <Link to="/projects" className="hover:text-gray-500">
               About us
             </Link>
             <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <li>
-                <Link to="/mission" className="block px-4 py-2 hover:bg-gray-100">
+                <Link
+                  to="/mission"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
                   Mission
                 </Link>
               </li>
@@ -42,17 +45,16 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
-          
+
           <li>
             <Link to={"/gallery"} className="hover:text-gray-500">
               Gallery
             </Link>
           </li>
           <li>
-          <Link to="/donate" className="hover:text-gray-500">
+            <Link to="/donate" className="hover:text-gray-500">
               Donate
             </Link>
-            
           </li>
           <li className="relative group">
             <Link to="/projects" className="hover:text-gray-500">
@@ -60,12 +62,18 @@ const Navbar = () => {
             </Link>
             <ul className="absolute left-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <li>
-                <Link to="/projects" className="block px-4 py-2 hover:bg-gray-100">
+                <Link
+                  to="/projects"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
                   Current Projects
                 </Link>
               </li>
               <li>
-                <Link to="/pastprojects" className="block px-4 py-2 hover:bg-gray-100">
+                <Link
+                  to="/pastprojects"
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
                   Past Projects
                 </Link>
               </li>
@@ -118,12 +126,18 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <Link to="/projects" className="block px-4 py-2 hover:bg-gray-100">
+              <Link
+                to="/projects"
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
                 Current Projects
               </Link>
             </li>
             <li>
-              <Link to="/pastprojects" className="block px-4 py-2 hover:bg-gray-100">
+              <Link
+                to="/pastprojects"
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
                 Past Projects
               </Link>
             </li>
