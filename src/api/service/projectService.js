@@ -4,7 +4,7 @@ import axiosInstance from '../axiosInstance';
 const fetchProjects = async () => {
     try {
         const response = await axiosInstance.get("/projects/");
-        return response.data.filter(
+        return response.data?.filter(
             project => project.status === "active" || project.status === "completed"
         );
     } catch (error) {
@@ -16,7 +16,7 @@ const fetchProjects = async () => {
 const fetchBlogs = async () => {
     try {
         const response = await axiosInstance.get("/blogs/");
-        return response.data.filter(blog => blog.status === "active" || blog.status === "completed");
+        return response.data?.filter(blog => blog.status === "active" || blog.status === "completed");
     } catch (error) {
         console.error("Error fetching projects:", error.response?.data || error.message);
         throw new Error(error.response?.data?.message || "Failed to fetch projects");
