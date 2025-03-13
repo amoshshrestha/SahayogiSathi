@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "/images/logo.png";
+import { useSubscription } from "./../api/service/subscribeService";
+import { toast } from "react-hot-toast";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const { mutate } = useSubscription();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    mutate(
+      { email },
+      {
+        onSuccess: () => {
+          toast.success("Succesfully subscribed");
+          setEmail("");
+        },
+        onError: (error) => {
+          toast.error(
+            error.response?.data?.message ||
+              "An error occurred while subscription."
+          );
+        },
+      }
+    );
+  };
   return (
     <footer className="bg-[#FBF5DD] py-8 w-full">
       <div className="max-w-screen-xl mx-auto px-6 md:px-12 lg:px-20 flex flex-col items-center gap-12 md:gap-14 lg:gap-16 xl:gap-10">
@@ -44,10 +66,7 @@ const Footer = () => {
               <a href="/projects" className="text-[#525560] text-md">
                 Current Projects
               </a>
-              <a
-                href="/donatenow"
-                className="text-[#525560] text-md"
-              >
+              <a href="/donatenow" className="text-[#525560] text-md">
                 Donate
               </a>
               <a href="/contact" className="text-[#525560] text-md">
@@ -58,16 +77,21 @@ const Footer = () => {
             {/* Column 3 */}
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-2 w-full sm:w-auto">
               <h3 className="text-lg font-bold text-[#16404D]">Connect</h3>
-              <a href="https://www.facebook.com/profile.php?id=100081288945979" className="text-[#525560] text-md">
-              <i className="fab fa-facebook"></i> Facebook
+              <a
+                href="https://www.facebook.com/profile.php?id=100081288945979"
+                className="text-[#525560] text-md"
+              >
+                <i className="fab fa-facebook"></i> Facebook
               </a>
-              <a href="https://www.instagram.com/sahayogisaathi/" className="text-[#525560] text-md">
-              <i className="fab fa-instagram"></i> Instagram
+              <a
+                href="https://www.instagram.com/sahayogisaathi/"
+                className="text-[#525560] text-md"
+              >
+                <i className="fab fa-instagram"></i> Instagram
               </a>
               <a href="tel:+1 929 471 3720 " className="text-[#525560] text-md">
-              <i className="fas fa-phone"></i> Phone
+                <i className="fas fa-phone"></i> Phone
               </a>
-              
             </div>
           </div>
         </div>
@@ -77,16 +101,25 @@ const Footer = () => {
           <h3 className="text-xl md:text-2xl font-bold text-[#16404D]">
             Subscribe to get latest updates
           </h3>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-5  w-full max-w-lg">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-5  w-full max-w-lg"
+          >
             <input
               type="email"
               placeholder="Your email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="border px-4 py-2 w-full text-[#525560] focus:outline-none focus:ring-2 focus:ring-[#16404D] rounded-md"
             />
-            <button className="bg-[#16404D] text-white px-6 py-2 w-full sm:w-auto rounded-md hover:bg-[#122F3A]">
+            <button
+              type="submit"
+              className="bg-[#16404D] text-white px-6 py-2 w-full sm:w-auto rounded-md hover:bg-[#122F3A]"
+            >
               Subscribe
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
