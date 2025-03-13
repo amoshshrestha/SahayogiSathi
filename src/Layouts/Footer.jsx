@@ -44,7 +44,7 @@ const Footer = () => {
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-2 w-full sm:w-auto">
               <h3 className="text-lg font-bold text-[#16404D]">Home</h3>
               <a href="/about" className="text-[#525560] text-md">
-                Vision
+                About us
               </a>
               <a href="/mission" className="text-[#525560] text-md">
                 Mission

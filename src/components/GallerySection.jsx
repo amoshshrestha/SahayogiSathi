@@ -21,7 +21,7 @@ const GallerySection = () => {
         {/* Header */}
         <div className="flex items-center justify-start px-12 mb-8">
           <Camera className="w-8 h-8 text-teal-600 mr-2" />
-          <h1 className="text-3xl font-bold text-gray-800">Camera Roll</h1>
+          <h1 className="text-3xl font-bold text-gray-800">Gallery</h1>
         </div>
 
         {/* Image Grid */}
