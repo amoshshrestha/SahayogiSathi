@@ -20,11 +20,14 @@ const Donate = () => {
               future. Every contribution counts—donate now and be a part of this
               impactful journey!
             </p>
-            <Link to={`/donatenow`} className="hover:text-gray-500">
+            <a
+                href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o"
+                
+              className="hover:text-gray-500">
               <button className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-md font-semibold transition-colors">
                 Donate now
               </button>
-            </Link>
+            </a>
           </div>
 
           {/* Image */}

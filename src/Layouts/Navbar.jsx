@@ -118,12 +118,9 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <a
-                href="https://www.gofundme.com/f/transform-bhaktapur-schools-hygiene-facilities/cl/o"
-                className="block"
-              >
+            <Link to={"/donate"} className="block">
                 Donate
-              </a>
+              </Link>
             </li>
             <li>
               <Link
