@@ -50,11 +50,9 @@ const Footer = () => {
                 Mission
               </a>
               <a href="/gallery" className="text-[#525560] text-md">
-                Camera Roll
+                Gallery
               </a>
-              <a href="/contact" className="text-[#525560] text-md">
-                Contact us
-              </a>
+              
             </div>
 
             {/* Column 2 */}
