@@ -30,10 +30,6 @@ const MyRoute = () => {
             <Route path="/donatesuccess" element={<DonateSuccess />} />
             <Route path="/donatecancel" element={<DonateCancel />} />
             <Route path="/donate" element={<Donate />} />
-
-
-
-
           </Route>
         </Routes>
       </BrowserRouter>

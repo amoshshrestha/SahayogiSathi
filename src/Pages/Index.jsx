@@ -1,18 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import CTASection from "../components/CTASection";
 import EventSection from "../components/EventSection";
-import { useNavigate,Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { useSubscription } from "./../api/service/subscribeService";
 import ProjectsSection from "../components/missionComponents/ProjectSection";
-
 
 const Index = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const { mutate } = useSubscription();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    mutate(
+      { email },
+      {
+        onSuccess: () => {
+          toast.success("Succesfully subscribed");
+          setEmail("");
+        },
+        onError: (error) => {
+          toast.error(
+            error.response?.data?.message ||
+              "An error occurred while subscription."
+          );
+        },
+      }
+    );
+  };
   return (
     <>
       <div className="relative w-full h-[500px] bg-cover bg-center flex items-center bg-white">
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="relative z-10 max-w-3xl mx-auto text-left px-10">
-          <h1 className="text-white text-5xl font-bold mb-6">
+          <h1 className="text-white text-4xl font-bold mb-5 justify-center">
+            Dear Supporters, stay connected with our latest updates and impact.
+          </h1>
+          <div className="flex flex-col w-full gap-4">
+            <h1 className="text-white text-3xl font-bold">
+              Subscribe to our newsletter today!
+            </h1>
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-5  w-full max-w-lg"
+            >
+              <input
+                type="email"
+                placeholder="Your email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="border px-6 py-2 w-full text-white text-xl focus:outline-none focus:ring-2 focus:ring-[#16404D] rounded-md"
+              />
+              <button
+                type="submit"
+                className="bg-[#A6CDC6] text-[#16404D] text-lg font-medium px-6 py-2 rounded-md hover:bg-[#8fb6af]"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+          {/* <h1 className="text-white text-5xl font-bold mb-6">
             Donate For a Cause
           </h1>
           <Link to="/donate"
@@ -21,7 +68,7 @@ const Index = () => {
             <button className="bg-[#A6CDC6] text-[#16404D] text-lg font-medium px-6 py-3 rounded-md hover:bg-[#8fb6af]">
               Donate Now
             </button>
-          </Link>
+          </Link> */}
         </div>
         <div
           className="absolute inset-0 bg-cover bg-center opacity-60"
